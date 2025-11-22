@@ -66,24 +66,46 @@ Database	MySQL
 Build/Run	Apache Tomcat
 Version Control	Git & GitHub
 4️⃣ Folder Structure
-Tomcat 9.0/
- └── webapps/
-        └── StudentManagement/
-              ├── index.jsp
-              ├── dashboard.jsp
-              ├── students.jsp
-              ├── student_form.jsp
-              ├── css/
-              │     └── styles.css
-              ├── js/
-              │     └── app.js
-              ├── includes/
-              │     ├── header.jsp
-              │     └── footer.jsp
-              └── WEB-INF/
-                    ├── web.xml
-                    └── classes/
+```
+C:\Tomcat 9.0\
+ └── webapps\
+      └── StudentManagement\
+           ├── index.jsp
+           ├── dashboard.jsp
+           ├── students.jsp
+           ├── student_form.jsp
+           │
+           ├── css\
+           │    └── styles.css
+           │
+           ├── js\
+           │    └── app.js
+           │
+           ├── includes\
+           │    ├── header.jsp
+           │    └── footer.jsp
+           │
+           ├── src\
+           │    └── com\
+           │        └── sms\
+           │            ├── dao\
+           │            │   └── StudentDAO.java
+           │            │
+           │            ├── model\
+           │            │   └── Student.java
+           │            │
+           │            ├── servlet\
+           │            │   └── StudentServlet.java
+           │            │
+           │            └── util\
+           │                └── DBUtil.java
+           │
+           └── WEB-INF\
+                ├── web.xml
+                ├── classes\
+                └── lib\
 
+```
 🗄 Database Setup (MySQL)
 
 Open MySQL or phpMyAdmin
