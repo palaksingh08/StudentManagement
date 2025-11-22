@@ -1,0 +1,81 @@
+/* ---------- Base / utilities ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root{
+  --bg-1: #05060a;
+  --bg-2: #08101a;
+  --card: rgba(255,255,255,0.03);
+  --accent-1: linear-gradient(135deg,#8b5cf6,#6366f1);
+  --glass: rgba(255,255,255,0.03);
+  --muted: #94a3b8;
+}
+
+*{box-sizing:border-box;font-family:'Inter',sans-serif}
+body{margin:0;background:linear-gradient(180deg,#02030a 0%, #071021 100%);color:#e6eef8;min-height:100vh}
+a{color: #b9a6ff;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ---------- Top bar ---------- */
+.topbar{height:72px;background:linear-gradient(90deg, rgba(11,16,24,0.7), rgba(6,9,12,0.6));display:flex;align-items:center;padding:0 32px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+.brand{display:flex;align-items:center;gap:14px}
+.logo-box{width:42px;height:42px;border-radius:10px;background:var(--accent-1);box-shadow:0 6px 22px rgba(99,102,241,0.22)}
+.brand-text{font-weight:700;font-size:20px}
+
+/* ---------- Navbar (secondary) ---------- */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:transparent;position:sticky;top:0;z-index:5}
+.nav-right a{margin-left:22px;color:#9fb0c9;font-weight:600}
+.nav-right a:hover{color:#fff;transform:translateY(-1px);transition:0.18s}
+
+/* ---------- Hero / Layout ---------- */
+.hero{display:flex;gap:40px;align-items:center;justify-content:center;padding:60px 40px}
+.hero-left{flex:1;max-width:640px}
+.hero-left h1{font-size:44px;margin:18px 0 6px}
+.hero-left p{color:var(--muted);font-size:16px}
+.hero-right{width:380px}
+
+/* ---------- Card / login ---------- */
+.card{background:linear-gradient(180deg, rgba(8,12,18,0.7), rgba(6,9,14,0.6));border-radius:18px;padding:28px;box-shadow:0 12px 40px rgba(3,6,12,0.6);border:1px solid rgba(255,255,255,0.03)}
+.login-card{padding:36px;border-radius:22px}
+.login-card h3{margin:0 0 18px;text-align:center}
+.form input{width:100%;padding:12px;border-radius:12px;border:none;background:#0f1620;color:#fff;margin-bottom:12px;font-size:15px}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;border:none;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,#8b5cf6,#6366f1);color:#fff;width:100%;font-weight:700;box-shadow:0 8px 28px rgba(99,102,241,0.18);transition:all .18s}
+.btn-primary:hover{transform:translateY(-3px);filter:brightness(1.03)}
+
+/* ---------- container ---------- */
+.container{width:92%;max-width:1200px;margin:32px auto}
+
+/* ---------- Cards grid ---------- */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+.card h3{margin:0 0 8px;color:#cfe6ff}
+.stat{font-size:28px;color:white;font-weight:700}
+
+/* ---------- Table area ---------- */
+.table-card{margin-top:26px;padding:24px;border-radius:14px;background:rgba(6,9,14,0.5);border:1px solid rgba(255,255,255,0.03)}
+.students-table{width:100%;border-collapse:collapse;margin-top:14px}
+.students-table th, .students-table td{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left;color:#cfe6ff}
+.students-table th{color:var(--muted);font-weight:700}
+.students-table tr:hover{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+
+/* ---------- Form ---------- */
+.form-card{background:linear-gradient(180deg, rgba(8,12,18,0.5), rgba(6,9,14,0.45));padding:30px;border-radius:16px}
+.student-form{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.student-form label{display:block;margin-bottom:6px;color:#dfeffd;font-weight:600}
+.student-form input, .student-form select, .student-form textarea{padding:10px;border-radius:10px;border:none;background:#0f1620;color:#fff}
+.form-group.wide{grid-column:span 2}
+.form-actions{grid-column:span 2;margin-top:12px;display:flex;gap:12px;align-items:center}
+
+/* ---------- small screens ---------- */
+@media (max-width: 900px){
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{flex-direction:column;padding:40px}
+  .student-form{grid-template-columns:1fr}
+  .hero-left{max-width:100%}
+}
+
+/* ---------- footer ---------- */
+.footer{padding:18px;text-align:center;color:var(--muted);margin-top:36px}
+
+/* ---------- animated glow accents ---------- */
+.logo-box{position:relative;overflow:hidden}
+.logo-box:after{content:'';position:absolute;inset:0;background:linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));mix-blend-mode:overlay;border-radius:10px}
